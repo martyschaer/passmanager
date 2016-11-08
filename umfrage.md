@@ -4,35 +4,9 @@ title: Umfrage
 permalink: /umfrage/
 order: 2
 ---
-Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch einen nötig hätten, haben wir eine kurze Umfrage durchgeführt. Diese haben wir im Internet veröffentlicht und innerhalb einer Woche ca. 130 Antworten erhalten.
-# Fragen
-Digitale Sicherheit
-
-IdPA
-
-Schär Marius
-Buchs Jean-Rémy
-Kaderli Severin
-
-# Inhaltsverzeichnis
-
-[[TOC]]
-
-# Vorwort
-
-"Wie sichern wir unsere digitale Idendität"
-
-# Abstract
-
-# Einleitung
-
-# Hauptteil
-
-# Umfrage
-
 Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch einen nötig hätten, haben wir eine kurze Umfrage durchgeführt. Diese haben wir im Internet veröffentlicht und innerhalb einer Woche ca. 130 Antworten erhalten. 
 
-## Fragen
+# Fragen
 
 |Englisch|Deutsch|
 |--- |--- |
@@ -49,34 +23,22 @@ Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch ei
 |How many characters do your passwords have on average?|Der Einsatz eines Passwortmanager führt häufig zu längeren Passwörtern. Längere Passwörter sind sicherer gegen Brute-Force-Angriffe.|
 |Do you use 2FA (eg. confirmation on your mobile)?|Ist das Passwort der einzige Schutz des Kontos? Mit 2FA reicht die Kenntnis des Passwortes nicht für eine Anmeldung, ausser man hat gleichzeitig auch Zugriff auf das Smartphone / Hardware Token / etc. des Opfers.|
 
+# Auswertung
 
-
-## Auswertung
-
-### Passwortlänge
+## Passwortlänge
 
 ![image alt text](image_0.png)
 
 Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeichen lässt sich durch die Anforderung der Mindestlänge vieler Dienste erklären. Bis etwa Passwörter mit zwölf Zeichen lassen sich gut merken. Die Häufungen bei 15 und 20 Zeichen könnte durch Standardeinstellungen der Passwortmanager erklärt werden.
 
-### Länder
+## Länder
 
 ![image alt text](image_1.png)
 
 46% der Umfrageteilnehmer stammen aus den USA und Kanada, 11% aus dem deutschsprachigen Teil von Europa (Deutschland, Österreich und Schweiz), 23% aus dem restlichen Teil von Europa und 20% aus dem Rest der Welt.
 
-### Geschlechtsaufteilung
+## Geschlechtsaufteilung
 
 ### ![image alt text](image_2.png)
-
-# Schlusswort
-
-# Abkürzungsverzeichnis
-
-# Literaturverzeichnis
-
-# Anhang
-
-# Authentizitätserklärung
 
 
