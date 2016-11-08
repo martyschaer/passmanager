@@ -15,33 +15,35 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package ch.gibb.idpa.passmanager;
+package ch.gibb.idpa.passmanager.controllers;
 
+import ch.gibb.idpa.passmanager.model.PasswordEntry;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 /**
- * Main controller for FX example.
  *
  * @author Jean-Rémy Buchs <jean-remy@gmx.ch>
  */
-public class FXMLController implements Initializable {
+public class PasswordDatabaseController implements Initializable {
 
 	@FXML
-	private Label label;
-
+	private TableView<PasswordEntry> table;
 	@FXML
-	public void handleButtonAction(ActionEvent event) {
-		System.out.println("You clicked me!");
-		label.setText("Hello World!");
-	}
+	private TableColumn<PasswordEntry, String> columnLabel;
+	@FXML
+	private TableColumn<PasswordEntry, String> columnUsername;
+	@FXML
+	private TableColumn<PasswordEntry, String> columnDescription;
 
 	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
+	public void initialize(URL location, ResourceBundle resources) {
+		columnLabel.setCellValueFactory(cell -> cell.getValue().labelProperty());
+		columnUsername.setCellValueFactory(cell -> cell.getValue().usernameProperty());
+		columnDescription.setCellValueFactory(cell -> cell.getValue().descriptionProperty());
 	}
 }
