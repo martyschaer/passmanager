@@ -2,6 +2,7 @@
 layout: page
 title: Home
 permalink: /
+order: 1
 ---
 # Domus ad iunctissimus heros simul densum in
 
