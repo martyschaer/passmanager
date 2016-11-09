@@ -27,18 +27,18 @@ Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch ei
 
 ## Passwortlänge
 
-![image alt text]({{ /assets/img/image_0.png | relative_url }})
+![image alt text]({{ "/assets/img/image_0.png" | relative_url }})
 
 Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeichen lässt sich durch die Anforderung der Mindestlänge vieler Dienste erklären. Bis etwa Passwörter mit zwölf Zeichen lassen sich gut merken. Die Häufungen bei 15 und 20 Zeichen könnte durch Standardeinstellungen der Passwortmanager erklärt werden.
 
 ## Länder
 
-![image alt text]({{ /assets/img/image_1.png | relative_url }})
+![image alt text]({{ "/assets/img/image_1.png" | relative_url }})
 
 46% der Umfrageteilnehmer stammen aus den USA und Kanada, 11% aus dem deutschsprachigen Teil von Europa (Deutschland, Österreich und Schweiz), 23% aus dem restlichen Teil von Europa und 20% aus dem Rest der Welt.
 
 ## Geschlechtsaufteilung
 
-### ![image alt text]({{ /assets/img/image_2.png | relative_url }})
+![image alt text]({{ "/assets/img/image_2.png" | relative_url }})
 
 
