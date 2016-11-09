@@ -38,4 +38,13 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
-body {background:green;}
+// Custom CSS
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid black;
+	padding: 10px;
+}
