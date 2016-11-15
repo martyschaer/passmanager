@@ -8,7 +8,7 @@ Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch ei
 
 # Fragen
 
-|Englisch|Deutsch|
+|Frage|Nutzen|
 |--- |--- |
 |Please provide your gender|Zur Einordnung der Teilnehmer.|
 |Age|Zur Einordnung der Teilnehmer.|
