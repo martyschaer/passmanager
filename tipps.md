@@ -33,7 +33,7 @@ Man sollte möglichst für jede Webseite / Dienst bei dem man ein Passwört ben�
 
 Zusätzlich sollte man sein Passwort bei Seiten bei denen Passwörter und Benutzerdaten entwendet wurden sofort ändern. Dies zählt auch für Seiten, bei denen man das gleiche Passwort verwendet.
 
-Auf (https://haveibeenpwned.com/)[https://haveibeenpwned.com/] kann man nachschauen auf welchen Seiten, Angreifer möglicherweise Zugriff auf Benutzerdaten erhalten haben.
+Auf [https://haveibeenpwned.com/](https://haveibeenpwned.com/) kann man nachschauen auf welchen Seiten, Angreifer möglicherweise Zugriff auf Benutzerdaten erhalten haben.
 
 ### Generieren von Passwörtern
 
