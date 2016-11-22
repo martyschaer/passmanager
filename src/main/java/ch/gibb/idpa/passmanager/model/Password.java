@@ -15,33 +15,16 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package ch.gibb.idpa.passmanager;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+package ch.gibb.idpa.passmanager.model;
 
 /**
- * Main controller for FX example.
  *
  * @author Jean-Rémy Buchs <jean-remy@gmx.ch>
  */
-public class FXMLController implements Initializable {
-
-	@FXML
-	private Label label;
-
-	@FXML
-	public void handleButtonAction(ActionEvent event) {
-		System.out.println("You clicked me!");
-		label.setText("Hello World!");
-	}
+public class Password implements Cloneable {
 
 	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
+	public Password clone() {
+		return new Password(); // TODO: Implement
 	}
 }
