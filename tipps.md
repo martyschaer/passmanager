@@ -6,7 +6,8 @@ order: 3
 ---
 
 # Tipps zum sichern Ihrer digitalen Identität
-
+* TOC
+{:toc}
 ## Passwörter
 Passwörter verwenden wir heutzutage fast überall. Ob es sich nun um die Passwörter für ein Sozialesnetzwerk, für eine Bank oder für sonst eine Webseite ist. Natürlich wollen wir nicht, dass sich andere Personen Zugriff auf unsere Daten erhalten, also ist es wichtig ein gutes Passwort zu wählen.
 
@@ -33,9 +34,9 @@ Man sollte möglichst für jede Webseite / Dienst bei dem man ein Passwört ben�
 
 Zusätzlich sollte man sein Passwort bei Seiten bei denen Passwörter und Benutzerdaten entwendet wurden sofort ändern. Dies zählt auch für Seiten, bei denen man das gleiche Passwort verwendet.
 
-Auf [https://haveibeenpwned.com/](https://haveibeenpwned.com/) kann man nachschauen auf welchen Seiten, Angreifer möglicherweise Zugriff auf Benutzerdaten erhalten haben.
+Auf [https://haveibeenpwned.com/](https://haveibeenpwned.com/) kann man nachschauen auf welchen Seiten, bei denen man registriert ist, Angreifer möglicherweise Zugriff auf Benutzerdaten erhalten haben.
 
-### Generieren von Passwörtern
+### Aufbewahrung
 
 ## Zweifaktorauthentifizierung (2FA)
 
