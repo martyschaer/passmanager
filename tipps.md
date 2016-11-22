@@ -4,10 +4,10 @@ title: Tipps
 permalink: /tipps/
 order: 3
 ---
-
-# Tipps zum sichern Ihrer digitalen Identität
 * TOC
 {:toc}
+
+# Tipps zum sichern Ihrer digitalen Identität
 
 ## Passwörter
 Passwörter verwenden wir heutzutage fast überall. Ob es sich nun um die Passwörter für ein Sozialesnetzwerk, für eine Bank oder für sonst eine Webseite ist. Natürlich wollen wir nicht, dass sich andere Personen Zugriff auf unsere Daten erhalten, also ist es wichtig ein gutes Passwort zu wählen.
