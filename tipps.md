@@ -23,10 +23,17 @@ Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Pass
  Ein Passwort mit Gross-, Kleinbuchstaben, Zahlen und Sonderzeichen mit der Länge von 6 Zeichen, lässt sich innerhalb von ein paar Minuten cracken. Während ein ähnliches Passwort mit 8 Zeichen, schon einige Tage dauert. Ein Passwort mit 10 oder mehr Zeichen benötigt dann schon eine sehr lange Zeit bis es gecrackt ist.
 - Man sollte verschiedene Arten von Zeichen verwenden. Anstatt nur Kleinbuchstaben für das Passwort zu verwenden, sollte man Klein-, Grossbuchstaben, Zahlen und Sonderzeichen gemischt verwenden.
 
- **Zur Veranschalichung:**  
+ **Zur Veranschaulichung:**  
  Ein Passwort der Länge 8, welches nur aus Kleinbuchstaben besteht, lässt sich in einer Minute cracken. Ein Passwort der Länge 8, mit allen Möglichen Zeichen dauert dann schon mehrere Tage.
+ 
+- Wenn man sich nicht die Mühe machen will, selber ein starkes Passwort auszudenken, kann man sich mithilfe von Passwort-Generatoren starke Passwörter generieren.
 
 ### Wiederverwendung
+Man sollte möglichst für jede Webseite / Dienst bei dem man ein Passwört benötigt ein anderes wählen. Dann ist man für den Fall geschützt, dass auf irgendeiner Seite sein Passwort gecrackt wurde. Wenn man jetzt überall das selbe Passwort verwendet hätte, könnte sich der Angreifer in alle möglichen Konten eindringen. Bei verschiedenen Passwörtern wäre dies nicht der Fall.
+
+Zusätzlich sollte man sein Passwort bei Seiten bei denen Passwörter und Benutzerdaten entwendet wurden sofort ändern. Dies zählt auch für Seiten, bei denen man das gleiche Passwort verwendet.
+
+Auf (ttps://haveibeenpwned.com/)[https://haveibeenpwned.com/] kann man nachschauen auf welchen Seiten, Angreifer möglicherweise Zugriff auf Benutzerdaten erhalten haben.
 
 ### Generieren von Passwörtern
 
