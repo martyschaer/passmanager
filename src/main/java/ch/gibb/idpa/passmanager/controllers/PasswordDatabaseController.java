@@ -17,13 +17,27 @@
  */
 package ch.gibb.idpa.passmanager.controllers;
 
+import ch.gibb.idpa.passmanager.model.PasswordDatabase;
 import ch.gibb.idpa.passmanager.model.PasswordEntry;
+import java.io.File;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.Property;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 
 /**
  *
@@ -40,10 +54,90 @@ public class PasswordDatabaseController implements Initializable {
 	@FXML
 	private TableColumn<PasswordEntry, String> columnDescription;
 
+	private final PasswordDatabase database = new PasswordDatabase();
+
+	public void openDatabase() {
+		if (closeDatabase()) {
+			showFileDialog(false).ifPresent(database::load);
+		}
+	}
+
+	public void saveDatabase() {
+		showFileDialog(true).ifPresent(database::save);
+	}
+
+	public boolean closeDatabase() {
+		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+		alert.setTitle("Close Database");
+		alert.setHeaderText("Close Database");
+		alert.setContentText("Do you really want to close the database without saving?");
+		alert.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO);
+
+		if (alert.showAndWait().filter(button -> button == ButtonType.YES).isPresent()) {
+			database.clear();
+			return true;
+		}
+		return false;
+	}
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		table.setItems(database.passwordsProperty());
+		database.load(new File("default.pwdb")); // TODO: Remove (test)
+
+		table.setRowFactory(table -> {
+			TableRow<PasswordEntry> row = new TableRow<>();
+			row.setOnMouseClicked(event -> {
+				if (event.getClickCount() == 2 && (!row.isEmpty())) {
+					PasswordEntry rowData = row.getItem();
+
+					showDialog(rowData).ifPresent(res -> {
+						database.passwordsProperty().remove(rowData);
+						database.passwordsProperty().add(res);
+					});
+				}
+			});
+			return row;
+		});
+
 		columnLabel.setCellValueFactory(cell -> cell.getValue().labelProperty());
 		columnUsername.setCellValueFactory(cell -> cell.getValue().usernameProperty());
 		columnDescription.setCellValueFactory(cell -> cell.getValue().descriptionProperty());
+	}
+
+	private Optional<PasswordEntry> showDialog(PasswordEntry original) {
+		PasswordEntry copy = original.clone();
+
+		Dialog<PasswordEntry> dialog = new Dialog<>();
+
+		dialog.titleProperty().bind(Bindings.format("Edit Password \"%S\"", copy.labelProperty()));
+		dialog.getDialogPane().getButtonTypes().addAll(ButtonType.APPLY, ButtonType.CANCEL);
+		dialog.setResultConverter(button -> button == ButtonType.APPLY ? copy : null);
+
+		GridPane grid = new GridPane();
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.setPadding(new Insets(20, 150, 10, 10));
+		dialog.getDialogPane().setContent(grid);
+
+		grid.addRow(0, new Label("Label: "), createTextField(copy.labelProperty()));
+		grid.addRow(1, new Label("Username: "), createTextField(copy.usernameProperty()));
+//		grid.addRow(2, new Label("Password: "), createTextField(copy.passwordProperty()));
+		grid.addRow(3, new Label("Description: "), createTextField(copy.descriptionProperty()));
+
+		return dialog.showAndWait();
+	}
+
+	private TextField createTextField(Property<String> property) {
+		TextField field = new TextField();
+		field.textProperty().bindBidirectional(property);
+		return field;
+	}
+
+	private Optional<File> showFileDialog(boolean save) {
+		FileChooser chooser = new FileChooser();
+		chooser.setTitle((save ? "Save" : "Open") + " Password Database");
+		chooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("Passmanager database", "*.pwdb"));
+		return Optional.ofNullable(save ? chooser.showSaveDialog(null) : chooser.showOpenDialog(null));
 	}
 }

@@ -26,7 +26,7 @@ import javafx.beans.property.SimpleStringProperty;
  *
  * @author Jean-Rémy Buchs <jean-remy@gmx.ch>
  */
-public class PasswordEntry {
+public class PasswordEntry implements Cloneable {
 
 	private final Property<String> label = new SimpleStringProperty();
 	private final Property<String> username = new SimpleStringProperty();
@@ -92,5 +92,18 @@ public class PasswordEntry {
 
 	public Property<Instant> lastUpdateProperty() {
 		return lastUpdate;
+	}
+
+	@Override
+	public PasswordEntry clone() {
+		PasswordEntry copy = new PasswordEntry();
+
+		copy.setLabel(getLabel());
+		copy.setUsername(getUsername());
+		copy.setPassword(getPassword() == null ? null : getPassword().clone());
+		copy.setDescription(getDescription());
+		copy.setLastUpdate(getLastUpdate());
+
+		return copy;
 	}
 }

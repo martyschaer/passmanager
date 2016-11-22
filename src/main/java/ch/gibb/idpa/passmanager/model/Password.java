@@ -17,15 +17,14 @@
  */
 package ch.gibb.idpa.passmanager.model;
 
-import javafx.beans.InvalidationListener;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.beans.value.ObservableValueBase;
-
 /**
  *
  * @author Jean-Rémy Buchs <jean-remy@gmx.ch>
  */
-public class Password {
+public class Password implements Cloneable {
 
+	@Override
+	public Password clone() {
+		return new Password(); // TODO: Implement
+	}
 }

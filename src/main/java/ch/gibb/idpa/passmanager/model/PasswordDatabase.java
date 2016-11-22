@@ -27,8 +27,15 @@ import javafx.collections.ObservableList;
  */
 public class PasswordDatabase {
 
-	public PasswordDatabase(File file) {
+	private final ObservableList<PasswordEntry> passwords = FXCollections.observableArrayList();
+
+	public PasswordDatabase() {
+
+	}
+
+	public void load(File file) {
 		// TODO: Implement logic
+		passwords.add(new PasswordEntry()); // TODO: Replace (test)
 	}
 
 	public void save(File file) {
@@ -36,6 +43,11 @@ public class PasswordDatabase {
 	}
 
 	public ObservableList<PasswordEntry> passwordsProperty() {
-		return FXCollections.observableArrayList(); // TODO: Implement logic
+		return passwords;
+	}
+
+	public void clear() {
+		passwords.clear();
+		// TODO: Implement logic
 	}
 }
