@@ -17,10 +17,12 @@
  */
 package ch.gibb.idpa.passmanager.model;
 
+import com.migesok.jaxb.adapter.javatime.InstantXmlAdapter;
 import java.time.Instant;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
@@ -82,6 +84,7 @@ public class PasswordEntry implements Cloneable {
 		return description;
 	}
 
+	@XmlJavaTypeAdapter(InstantXmlAdapter.class)
 	public Instant getLastUpdate() {
 		return lastUpdate.getValue();
 	}
