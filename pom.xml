@@ -19,7 +19,6 @@
 		<name>Gibb</name>
 	</organization>
 
-
 	<dependencies>
 		<dependency>
 			<groupId>com.migesok</groupId>
