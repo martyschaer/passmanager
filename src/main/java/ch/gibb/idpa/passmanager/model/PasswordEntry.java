@@ -30,7 +30,7 @@ public class PasswordEntry implements Cloneable {
 
 	private final Property<String> label = new SimpleStringProperty();
 	private final Property<String> username = new SimpleStringProperty();
-	private final Property<Password> password = new SimpleObjectProperty<>();
+	private final Property<String> password = new SimpleStringProperty();
 	private final Property<String> description = new SimpleStringProperty();
 	private final Property<Instant> lastUpdate = new SimpleObjectProperty<>();
 
@@ -58,15 +58,15 @@ public class PasswordEntry implements Cloneable {
 		return username;
 	}
 
-	public Password getPassword() {
+	public String getPassword() {
 		return password.getValue();
 	}
 
-	public void setPassword(Password password) {
+	public void setPassword(String password) {
 		this.password.setValue(password);
 	}
 
-	public Property<Password> passwordProperty() {
+	public Property<String> passwordProperty() {
 		return password;
 	}
 
@@ -100,7 +100,7 @@ public class PasswordEntry implements Cloneable {
 
 		copy.setLabel(getLabel());
 		copy.setUsername(getUsername());
-		copy.setPassword(getPassword() == null ? null : getPassword().clone());
+		copy.setPassword(getPassword());
 		copy.setDescription(getDescription());
 		copy.setLastUpdate(getLastUpdate());
 
