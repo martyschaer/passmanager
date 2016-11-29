@@ -110,7 +110,7 @@ public class PasswordDatabaseController implements Initializable {
 
 		Dialog<PasswordEntry> dialog = new Dialog<>();
 
-		dialog.titleProperty().bind(Bindings.format("Edit Password \"%S\"", copy.labelProperty()));
+		dialog.titleProperty().bind(Bindings.format("Edit Password \"%s\"", copy.labelProperty()));
 		dialog.getDialogPane().getButtonTypes().addAll(ButtonType.APPLY, ButtonType.CANCEL);
 		dialog.setResultConverter(button -> button == ButtonType.APPLY ? copy : null);
 
