@@ -17,10 +17,12 @@
  */
 package ch.gibb.idpa.passmanager.model;
 
+import com.migesok.jaxb.adapter.javatime.InstantXmlAdapter;
 import java.time.Instant;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  *
@@ -30,7 +32,7 @@ public class PasswordEntry implements Cloneable {
 
 	private final Property<String> label = new SimpleStringProperty();
 	private final Property<String> username = new SimpleStringProperty();
-	private final Property<Password> password = new SimpleObjectProperty<>();
+	private final Property<String> password = new SimpleStringProperty();
 	private final Property<String> description = new SimpleStringProperty();
 	private final Property<Instant> lastUpdate = new SimpleObjectProperty<>();
 
@@ -58,15 +60,15 @@ public class PasswordEntry implements Cloneable {
 		return username;
 	}
 
-	public Password getPassword() {
+	public String getPassword() {
 		return password.getValue();
 	}
 
-	public void setPassword(Password password) {
+	public void setPassword(String password) {
 		this.password.setValue(password);
 	}
 
-	public Property<Password> passwordProperty() {
+	public Property<String> passwordProperty() {
 		return password;
 	}
 
@@ -82,6 +84,7 @@ public class PasswordEntry implements Cloneable {
 		return description;
 	}
 
+	@XmlJavaTypeAdapter(InstantXmlAdapter.class)
 	public Instant getLastUpdate() {
 		return lastUpdate.getValue();
 	}
@@ -100,7 +103,7 @@ public class PasswordEntry implements Cloneable {
 
 		copy.setLabel(getLabel());
 		copy.setUsername(getUsername());
-		copy.setPassword(getPassword() == null ? null : getPassword().clone());
+		copy.setPassword(getPassword());
 		copy.setDescription(getDescription());
 		copy.setLastUpdate(getLastUpdate());
 

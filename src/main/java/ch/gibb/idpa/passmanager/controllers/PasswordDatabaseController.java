@@ -21,6 +21,7 @@ import ch.gibb.idpa.passmanager.model.PasswordDatabase;
 import ch.gibb.idpa.passmanager.model.PasswordEntry;
 import java.io.File;
 import java.net.URL;
+import java.time.Instant;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
@@ -110,7 +111,7 @@ public class PasswordDatabaseController implements Initializable {
 
 		Dialog<PasswordEntry> dialog = new Dialog<>();
 
-		dialog.titleProperty().bind(Bindings.format("Edit Password \"%S\"", copy.labelProperty()));
+		dialog.titleProperty().bind(Bindings.format("Edit Password \"%s\"", copy.labelProperty()));
 		dialog.getDialogPane().getButtonTypes().addAll(ButtonType.APPLY, ButtonType.CANCEL);
 		dialog.setResultConverter(button -> button == ButtonType.APPLY ? copy : null);
 
@@ -122,10 +123,12 @@ public class PasswordDatabaseController implements Initializable {
 
 		grid.addRow(0, new Label("Label: "), createTextField(copy.labelProperty()));
 		grid.addRow(1, new Label("Username: "), createTextField(copy.usernameProperty()));
-//		grid.addRow(2, new Label("Password: "), createTextField(copy.passwordProperty()));
+		grid.addRow(2, new Label("Password: "), createTextField(copy.passwordProperty()));
 		grid.addRow(3, new Label("Description: "), createTextField(copy.descriptionProperty()));
 
-		return dialog.showAndWait();
+		Optional<PasswordEntry> ret = dialog.showAndWait();
+		ret.ifPresent(entry -> entry.setLastUpdate(Instant.now()));
+		return ret;
 	}
 
 	private TextField createTextField(Property<String> property) {
