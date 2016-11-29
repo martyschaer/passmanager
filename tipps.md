@@ -31,7 +31,7 @@ Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Pass
 - Wenn man sich nicht die Mühe machen will, selber ein starkes Passwort auszudenken, kann man sich mithilfe von Passwort-Generatoren starke Passwörter generieren.
 
  **Zur Veranschaulichung:**  
- Um an einem konkreten Beispiel zu sehen wie sicher ein Passwort ist, kann Software verwendet werden. Wir empfehlen ein Produkt namens [zxcvbn](https://www.bennish.net/password-strength-checker/). Er basiert auf [Technologie von Dropbox](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/). 
+ Um an einem konkreten Beispiel zu sehen wie sicher ein Passwort ist, kann Software verwendet werden. Wir empfehlen ein Produkt namens [zxcvbn](https://www.bennish.net/password-strength-checker/). Es basiert auf einer [Technologie von Dropbox](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/). 
 
 **Man sollte *nie* seine echten Passwörter auf einer unbekannten Website eingeben.** Daher verwendet man am besten ein Passwort das ähnlich ist zu dem, welches man testen möchte.
 
