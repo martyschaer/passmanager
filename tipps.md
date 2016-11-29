@@ -10,9 +10,10 @@ order: 3
 # Tipps zum Sichern Ihrer digitalen Identität
 
 ## Passwörter
-Passwörter verwenden wir heutzutage fast überall. Ob es sich nun um die Passwörter für ein Sozialesnetzwerk, für eine Bank oder für sonst eine Webseite ist. Natürlich wollen wir nicht, dass sich andere Personen Zugriff auf unsere Daten erhalten, also ist es wichtig ein gutes Passwort zu wählen.
+Passwörter verwenden wir heutzutage fast überall. Ob es sich nun um die Passwörter für ein soziales Netzwerk, für eine Bank oder für sonst eine Webseite handelt. Natürlich wollen wir nicht, dass sich andere Personen Zugriff auf unsere Daten verschaffen, also ist es wichtig ein gutes Passwort zu wählen.
 
-Die nächsten Abschnitte befassen sich alle mit den besten Praktiken wie man seine Passwörter am besten wählen soll und wie man sie aufbewahren soll.
+Die nächsten Abschnitte befassen sich alle mit der best Practice[^best Practice]:Das beste Verhalten / Idealverhalten / Erfolgsmethode
+ wie man seine Passwörter am besten wählen sollte und wie man sie aufbewahren sollte.
 
 ### Komplexizität
 Heuzutage können Hacker mehrere Milliarden Passwörter jede Sekunde generieren und austesten. Ein Passwort wie "apfel" oder "password" werden dabei innerhalb von ein paar Milisekunden gecrackt.
