@@ -48,4 +48,5 @@ Auf [https://haveibeenpwned.com/](https://haveibeenpwned.com/) kann man nachscha
 ### Speichern von Passwörtern
 
 #Glossar
-[^1]:Das beste Verhalten / Idealverhalten / Erfolgsmethode
+
+[^1]: Das beste Verhalten / Idealverhalten / Erfolgsmethode
