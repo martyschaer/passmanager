@@ -4,7 +4,6 @@ description: >
 baseurl: ""
 url: "" 
 
-
 github_username: martyschaer
 
 # Build settings

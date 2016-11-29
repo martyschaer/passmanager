@@ -9,5 +9,8 @@ Zusätzlich zu unserer Umfrage und unseren Tipps für den Schutz der digitalen I
 # Technische Details
 Unser Passwort-Manager wurde mit Hilfe von Java 8 und JavaFX umgesetzt, damit eine Plattformübergreifende Nutzung gesichert ist.
 
+# Benutzeranleitung
+Coming soon (hopefully)
+
 # Download
-Das GitHub-Repository mit dem Code für den Passwort-Manager kann unter [https://github.com/martyschaer/passmanager](https://github.com/martyschaer/passmanager) gefunden werden. Downloads für ausführbare Versionen sind auf der [https://github.com/martyschaer/passmanager/releases](Release-Seite) zu finden.
+Das GitHub-Repository mit dem Code für den Passwort-Manager kann unter [https://github.com/martyschaer/passmanager](https://github.com/martyschaer/passmanager) gefunden werden. Downloads für ausführbare Versionen sind auf der [Release-Seite](https://github.com/martyschaer/passmanager/releases) zu finden.
