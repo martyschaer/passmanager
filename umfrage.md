@@ -6,6 +6,8 @@ order: 2
 ---
 Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch einen nötig hätten, haben wir eine kurze Umfrage durchgeführt. Diese haben wir im Internet veröffentlicht und innerhalb einer Woche ca. 130 Antworten erhalten. 
 
+Die Stichprope favorisierte Menschen welche sich routiniert im Internet zurechtfinden, da sie auf [reddit](https://reddit.com/r/samplesize) veröffentlich wurde.
+
 # Fragen
 
 |Frage|Nutzen|
@@ -41,4 +43,4 @@ Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeiche
 
 ![Bild welches die Geschlechtsaufteilung der Befragten zeigt (29.4 % Weiblich, 68.3% Männlich)]({{ "/assets/img/image_2.png" | relative_url }})
 
-
+Die extreme Mengendifferent zwischen männlichen und weiblichen Teilnehmern ist durch die Demographie der Benutzerbasis von [reddit.com](https://reddit.com) zu begründen ([Quelle: journalism.org](http://www.journalism.org/2016/02/25/reddit-news-users-more-likely-to-be-male-young-and-digital-in-their-news-preferences/)).
