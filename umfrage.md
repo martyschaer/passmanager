@@ -10,35 +10,35 @@ Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch ei
 
 |Frage|Nutzen|
 |--- |--- |
-|Please provide your gender|Zur Einordnung der Teilnehmer.|
-|Age|Zur Einordnung der Teilnehmer.|
-|Where are you from? (Continent)|Zur Einordnung der Teilnehmer.|
-|Where are you from? (Country)|Zur Einordnung der Teilnehmer.|
-|Which industry do you work in or is your field of study in?|Zur Einordnung der Teilnehmer.|
-|Roughly how many hours per week do you use… [Any device at work, Desktop, Laptop, Tablet, Smartphone]|Die Verbreitung der einzelnen Geräte hat einen Einfluss auf die wichtigste Zielgruppe eines Passwortmanagers.|
-|How do you secure your devices? [Any device at work, Desktop, Laptop, Mobile Device]|Welche Alternativen zu Passwörtern werden eingesetzt?|
-|How many different services do you use?|Wenn man pro Dienst ein eigenes Passwort einsetzen will, braucht man unter Umständen sehr viele Passwörter.|
-|How many different passwords do you use?|Ein eigenes Passwort pro Service ist viel sicherer, aber fast nur mit einem Passwortmanager möglich.|
-|Which types of characters do your passwords have?|Je mehr Arten der Zeichen (Zahlen, Grossbuchstaben, Kleinbuchstaben und Sonderzeichen) im Passwort enthalten sind, desto schwieriger sind Brute-Force-Angriffe.|
-|How many characters do your passwords have on average?|Der Einsatz eines Passwortmanager führt häufig zu längeren Passwörtern. Längere Passwörter sind sicherer gegen Brute-Force-Angriffe.|
-|Do you use 2FA (eg. confirmation on your mobile)?|Ist das Passwort der einzige Schutz des Kontos? Mit 2FA reicht die Kenntnis des Passwortes nicht für eine Anmeldung, ausser man hat gleichzeitig auch Zugriff auf das Smartphone / Hardware Token / etc. des Opfers.|
+|Bitte geben Sie ihr Geschlecht an.|Zur Einordnung der Teilnehmer.|
+|Alter|Zur Einordnung der Teilnehmer.|
+|Woher kommen Sie? (Kontinent)|Zur Einordnung der Teilnehmer.|
+|Woher kommen Sie? (Land)|Zur Einordnung der Teilnehmer.|
+|In welcher Branche arbeiten oder studieren Sie??|Zur Einordnung der Teilnehmer.|
+|Ungefähr wie oft pro Woche benutzen Sie..[Stunden]?[Ein Gerät vom Arbeitgeber, Desktop, Laptop, Tablet, Smartphone]|Die Verbreitung der einzelnen Geräte hat einen Einfluss auf die wichtigste Zielgruppe eines Passwortmanagers.|
+|Wie sichern Sie ihre Geräte? [Ein Gerät vom Arbeitgeber, Desktop, Laptop, mobiles Gerät]|Welche Alternativen zu Passwörtern werden eingesetzt?|
+|Wie viele verschiedene Dienste verwenden Sie?|Wenn man pro Dienst ein eigenes Passwort einsetzen will, braucht man unter Umständen sehr viele Passwörter.|
+|Wie viele verschiedene Passwörter verwenden Sie?|Ein eigenes Passwort pro Service ist viel sicherer, aber fast nur mit einem Passwortmanager möglich.|
+|Welche Arten von Zeichen verwenden Ihre Passwörter?|Je mehr Arten der Zeichen (Zahlen, Grossbuchstaben, Kleinbuchstaben und Sonderzeichen) im Passwort enthalten sind, desto schwieriger sind Brute-Force-Angriffe.|
+|Im Durchschnitt, wie viele Zeichen haben Ihre Passwörter?|Der Einsatz eines Passwortmanager führt häufig zu längeren Passwörtern. Längere Passwörter sind sicherer gegen Brute-Force-Angriffe.|
+|Benutzen Sie 2FA (z.B. SMS Codes, eBanking Kartenleser, etc..)?|Ist das Passwort der einzige Schutz des Kontos? Mit 2FA reicht die Kenntnis des Passwortes nicht für eine Anmeldung, ausser man hat gleichzeitig auch Zugriff auf das Smartphone / Hardware Token / etc. des Opfers.|
 
 # Auswertung
 
 ## Passwortlänge
 
-![image alt text]({{ "/assets/img/image_0.png" | relative_url }})
+![Balkendiagramm, welches die Verteilung von Passwortlängen zeigt. Auffällige Spitzen bei 8, 10, 12 und 15 Zeichen]({{ "/assets/img/image_0.png" | relative_url }})
 
 Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeichen lässt sich durch die Anforderung der Mindestlänge vieler Dienste erklären. Bis etwa Passwörter mit zwölf Zeichen lassen sich gut merken. Die Häufungen bei 15 und 20 Zeichen könnte durch Standardeinstellungen der Passwortmanager erklärt werden.
 
 ## Länder
 
-![image alt text]({{ "/assets/img/image_1.png" | relative_url }})
+![Bild welches die geographische Verteilung der Befragten zeigt (40% USA, 20% Andere, 14% Kanada, 7% GB, 19% diverse europäische Länder (incl. Schweiz))]({{ "/assets/img/image_1.png" | relative_url }})
 
 46% der Umfrageteilnehmer stammen aus den USA und Kanada, 11% aus dem deutschsprachigen Teil von Europa (Deutschland, Österreich und Schweiz), 23% aus dem restlichen Teil von Europa und 20% aus dem Rest der Welt.
 
 ## Geschlechtsaufteilung
 
-![image alt text]({{ "/assets/img/image_2.png" | relative_url }})
+![Bild welches die Geschlechtsaufteilung der Befragten zeigt (29.4 % Weiblich, 68.3% Männlich)]({{ "/assets/img/image_2.png" | relative_url }})
 
 
