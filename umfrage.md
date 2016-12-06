@@ -16,7 +16,7 @@ Die Stichprope favorisierte Menschen welche sich routiniert im Internet zurechtf
 |Alter|Zur Einordnung der Teilnehmer.|
 |Woher kommen Sie? (Kontinent)|Zur Einordnung der Teilnehmer.|
 |Woher kommen Sie? (Land)|Zur Einordnung der Teilnehmer.|
-|In welcher Branche arbeiten oder studieren Sie??|Zur Einordnung der Teilnehmer.|
+|In welcher Branche arbeiten oder studieren Sie?|Zur Einordnung der Teilnehmer.|
 |Ungefähr wie oft pro Woche benutzen Sie..[Stunden]?[Ein Gerät vom Arbeitgeber, Desktop, Laptop, Tablet, Smartphone]|Die Verbreitung der einzelnen Geräte hat einen Einfluss auf die wichtigste Zielgruppe eines Passwortmanagers.|
 |Wie sichern Sie ihre Geräte? [Ein Gerät vom Arbeitgeber, Desktop, Laptop, mobiles Gerät]|Welche Alternativen zu Passwörtern werden eingesetzt?|
 |Wie viele verschiedene Dienste verwenden Sie?|Wenn man pro Dienst ein eigenes Passwort einsetzen will, braucht man unter Umständen sehr viele Passwörter.|
