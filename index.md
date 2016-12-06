@@ -21,6 +21,6 @@ Wir zeigen Ihnen was Sie tun können um sich zu schützen.
 ## Merkblat zur digitalen Sicherheit
 Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: Wenn ein System sicherer wird, wird es schwieriger für den Benutzer.
 
-![Bild welches die Abnahme von Usability mit der Zunahme von Security zeigt]({{ "/assets/img/image_security_usability.png" | relative_url }})
+![Bild welches die Abnahme von Usability mit der Zunahme von Security zeigt]({{ "/assets/img/image_security_usability.jpg" | relative_url }})
 
 ## Download des Passwortmanagers
