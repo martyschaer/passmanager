@@ -19,8 +19,11 @@ Unsere digitale Identität, ob Emails, Facebook, Katzenvideos, Chats oder Google
 Wir zeigen Ihnen was Sie tun können um sich zu schützen.
 
 ## Merkblat zur digitalen Sicherheit
-Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: Wenn ein System sicherer wird, wird es schwieriger für den Benutzer.
+Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: *Wenn ein System sicherer wird, wird es schwieriger für den Benutzer.*
 
 ![Bild welches die Abnahme von Usability mit der Zunahme von Security zeigt]({{ "/assets/img/image_security_usability.jpg" | relative_url }})
 
+Idealerweise merkt man sich für jeden Dienst (Website, Mobiltelefon, Bank, etc.) ein einzigartiges Passwort welches
+ - über 30 Zeichen lang ist
+ - Zeichen von A-Z und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (+"\*ç%&/()=?<>@#<] etc.) und Zahlen 0-9 enthält.
 ## Download des Passwortmanagers
