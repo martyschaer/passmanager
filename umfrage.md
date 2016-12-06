@@ -9,7 +9,7 @@ Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch ei
 Die Stichprope favorisierte Menschen welche sich routiniert im Internet zurechtfinden, da sie auf [reddit](https://reddit.com/r/samplesize) veröffentlich wurde.
 
 # Fragen
-
+[
 |Frage|Nutzen|
 |--- |--- |
 |Bitte geben Sie ihr Geschlecht an.|Zur Einordnung der Teilnehmer.|
@@ -24,7 +24,7 @@ Die Stichprope favorisierte Menschen welche sich routiniert im Internet zurechtf
 |Welche Arten von Zeichen verwenden Ihre Passwörter?|Je mehr Arten der Zeichen (Zahlen, Grossbuchstaben, Kleinbuchstaben und Sonderzeichen) im Passwort enthalten sind, desto schwieriger sind Brute-Force-Angriffe.|
 |Im Durchschnitt, wie viele Zeichen haben Ihre Passwörter?|Der Einsatz eines Passwortmanager führt häufig zu längeren Passwörtern. Längere Passwörter sind sicherer gegen Brute-Force-Angriffe.|
 |Benutzen Sie 2FA (z.B. SMS Codes, eBanking Kartenleser, etc..)?|Ist das Passwort der einzige Schutz des Kontos? Mit 2FA reicht die Kenntnis des Passwortes nicht für eine Anmeldung, ausser man hat gleichzeitig auch Zugriff auf das Smartphone / Hardware Token / etc. des Opfers.|
-
+](/spoiler)
 # Auswertung
 
 ## Passwortlänge
