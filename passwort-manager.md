@@ -14,11 +14,16 @@ Java ist nach neustem Stand der Technik bekannt als Programmiersprache der Enter
 ## Verschlüsselung
 Zur Verschlüsselung verwendet unser Passwortmanager AES256/CBC/PKCS5Padding.
 
- - *AES256*
+ - **AES256**
+
 Lorem lorem
- - *CBC*
+
+ - **CBC**
+
 Lorem lorem
-- *PKCS5Padding*
+
+- **PKCS5Padding**
+
 Dolorem ipsumer
 
 # Benutzeranleitung
