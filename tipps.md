@@ -43,6 +43,13 @@ Zusätzlich sollte man sein Passwort bei Seiten bei denen Passwörter und Benutz
 Auf [https://haveibeenpwned.com/](https://haveibeenpwned.com/) kann man nachschauen auf welchen Seiten, bei denen man registriert ist, Angreifer möglicherweise Zugriff auf Benutzerdaten erhalten haben.
 
 ### Aufbewahrung
+Ein weiterer wichtiger Punkt ist die Aufbewahrung von Passwörtern. Selbst, wenn man das beste Passwort nutzt, welches man sich nur vorstellen kann, bringt es dann nichts, wenn man es auf ein Post-it schreibt und dieses an den Bildschirm klebt.
+
+Die beste Vorraussetzung für eine gute Aufbewahrung der Passwörter ist natürlich, wenn man sie auswendig lernt und sie aus dem Grund gar nicht aufbewahren muss. Jedoch ist es, besonders wenn man viele verschiedene und komplexe Passwörter hat, nicht möglich sich alle zu merken. Abhilfe schaffen hier sogenannte Passwort-Manager. 
+
+Ein Passwort-Manager dient dazu, alle Passwörter, welche man besitzt zu verwalten, daher der Name. Bei den meisten Passwort-Managers kann man verschiedene Seiten erfassen und dazu das jeweilige Passwort. Nun muss man sich insgesamt nur noch ein Passwort merken und zwar das Master-Passwort mit welchen man auf den Passwort-Manager zugreift und dann den vollen Zugriff auf seine Passwörter hat. Der Nachteil ist natürlich, wenn von jemandem das Master-Passwort herausgefunden wird, hat derjenige auch Zugriff auf alle Passwörter.
+
+Im Rahmen der IdPA haben wir neben dieser Webseite auch noch einen solchen Passwort-Manager erstellt. Dieser und Informationen zu dem kann man auf der [Passwort-Manager](passwort-manager) Seite finden.
 
 ## Zweifaktorauthentifizierung (2FA)
 
