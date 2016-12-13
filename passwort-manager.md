@@ -16,15 +16,15 @@ Zur Verschlüsselung verwendet unser Passwortmanager AES256/CBC/PKCS5Padding.
 
  - **AES256**
 
-Lorem lorem
+ Lorem lorem
 
  - **CBC**
 
-Lorem lorem
+ Lorem lorem
 
-- **PKCS5Padding**
+ - **PKCS5Padding**
 
-Dolorem ipsumer
+ Dolorem ipsumer
 
 # Benutzeranleitung
 Coming soon (hopefully)
