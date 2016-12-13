@@ -95,6 +95,17 @@
 			<build>
 				<plugins>
 					<plugin>
+						<groupId>com.zenjava</groupId>
+						<artifactId>javafx-maven-plugin</artifactId>
+						<configuration>
+							<allPermissions>true</allPermissions>
+							<keyStore>${signing.keystore}</keyStore>
+							<keyStorePassword>${signing.storepass}</keyStorePassword>
+							<keyStoreAlias>${signing.alias}</keyStoreAlias>
+							<keyPassword>${signing.keypass}</keyPassword>
+						</configuration>
+					</plugin>
+					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jarsigner-plugin</artifactId>
 						<version>1.4</version>
