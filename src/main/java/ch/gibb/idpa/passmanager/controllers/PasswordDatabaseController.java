@@ -24,8 +24,10 @@ import java.net.URL;
 import java.time.Instant;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.Property;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -33,6 +35,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
@@ -59,12 +62,12 @@ public class PasswordDatabaseController implements Initializable {
 
 	public void openDatabase() {
 		if (closeDatabase()) {
-			showFileDialog(false).ifPresent(database::load);
+			showFileDialog(false).ifPresent(showKeyDialog(database::load));
 		}
 	}
 
 	public void saveDatabase() {
-		showFileDialog(true).ifPresent(database::save);
+		showFileDialog(true).ifPresent(showKeyDialog(database::save));
 	}
 
 	public boolean closeDatabase() {
@@ -81,21 +84,37 @@ public class PasswordDatabaseController implements Initializable {
 		return false;
 	}
 
+	public void newPassword() {
+		PasswordEntry entry = new PasswordEntry();
+		entry.setLabel("Unnamed password");
+		database.passwordsProperty().add(entry);
+		table.getSelectionModel().select(entry);
+
+		editPassword();
+	}
+
+	public void editPassword() {
+		PasswordEntry rowData = table.getSelectionModel().getSelectedItem();
+
+		showDialog(rowData).ifPresent(res -> {
+			database.passwordsProperty().remove(rowData);
+			database.passwordsProperty().add(res);
+		});
+	}
+
+	public void deletePassword() {
+		database.passwordsProperty().remove(table.getSelectionModel().getSelectedItem());
+	}
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		table.setItems(database.passwordsProperty());
-		database.load(new File("default.pwdb")); // TODO: Remove (test)
 
 		table.setRowFactory(table -> {
 			TableRow<PasswordEntry> row = new TableRow<>();
 			row.setOnMouseClicked(event -> {
 				if (event.getClickCount() == 2 && (!row.isEmpty())) {
-					PasswordEntry rowData = row.getItem();
-
-					showDialog(rowData).ifPresent(res -> {
-						database.passwordsProperty().remove(rowData);
-						database.passwordsProperty().add(res);
-					});
+					editPassword();
 				}
 			});
 			return row;
@@ -137,10 +156,39 @@ public class PasswordDatabaseController implements Initializable {
 		return field;
 	}
 
+	private PasswordField createPasswordField(Property<String> property) {
+		PasswordField field = new PasswordField();
+		field.textProperty().bindBidirectional(property);
+		return field;
+	}
+
 	private Optional<File> showFileDialog(boolean save) {
 		FileChooser chooser = new FileChooser();
 		chooser.setTitle((save ? "Save" : "Open") + " Password Database");
 		chooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("Passmanager database", "*.pwdb"));
 		return Optional.ofNullable(save ? chooser.showSaveDialog(null) : chooser.showOpenDialog(null));
+	}
+
+	private Consumer<? super File> showKeyDialog(Consumer<? super File> consumer) {
+		return file -> {
+			Property<String> key = new SimpleStringProperty();
+			Dialog<String> dialog = new Dialog<>();
+
+			dialog.titleProperty().bind(Bindings.format("Enter key for \"%s\"", file.getName()));
+			dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+			dialog.setResultConverter(button -> button == ButtonType.OK ? key.getValue() : null);
+
+			GridPane grid = new GridPane();
+			grid.setHgap(10);
+			grid.setVgap(10);
+			grid.setPadding(new Insets(20, 150, 10, 10));
+			dialog.getDialogPane().setContent(grid);
+
+			grid.addRow(0, new Label("Key: "), createPasswordField(key));
+
+			Optional<String> ret = dialog.showAndWait();
+			ret.ifPresent(database::setKey);
+			ret.ifPresent(k -> consumer.accept(file));
+		};
 	}
 }

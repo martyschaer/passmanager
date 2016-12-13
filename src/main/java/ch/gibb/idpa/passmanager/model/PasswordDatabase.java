@@ -22,12 +22,25 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.beans.property.Property;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
+import javax.crypto.CipherOutputStream;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.JAXB;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -40,7 +53,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 public class PasswordDatabase {
 
+	private static String TRANSFORMATION = "AES/CBC/PKCS5Padding";
+
 	private final ObservableList<PasswordEntry> passwords = FXCollections.observableArrayList();
+	private final Property<String> key = new SimpleStringProperty();
 
 	public PasswordDatabase() {
 
@@ -50,8 +66,8 @@ public class PasswordDatabase {
 		FileInputStream in = null;
 		try {
 			in = new FileInputStream(file);
-			// TODO: Implement decryption logic
-			passwords.setAll(JAXB.unmarshal(in, PasswordEntryList.class).getPasswords());
+			CipherInputStream cin = new CipherInputStream(in, getCipher(true));
+			passwords.setAll(JAXB.unmarshal(cin, PasswordEntryList.class).getPasswords());
 		} catch (FileNotFoundException ex) {
 			throw new RuntimeException("Failed to load the password database.", ex);
 		} finally {
@@ -69,9 +85,10 @@ public class PasswordDatabase {
 		FileOutputStream out = null;
 		try {
 			out = new FileOutputStream(file);
-			// TODO: Implement encryption logic
-			JAXB.marshal(new PasswordEntryList(passwords), out);
-		} catch (FileNotFoundException ex) {
+			CipherOutputStream cout = new CipherOutputStream(out, getCipher(false));
+			JAXB.marshal(new PasswordEntryList(passwords), cout);
+			cout.close();
+		} catch (IOException ex) {
 			throw new RuntimeException("Failed to save the password database.", ex);
 		} finally {
 			try {
@@ -88,9 +105,35 @@ public class PasswordDatabase {
 		return passwords;
 	}
 
+	public String getKey() {
+		return key.getValue();
+	}
+
+	public void setKey(String val) {
+		key.setValue(val);
+	}
+
+	public Property<String> keyProperty() {
+		return key;
+	}
+
 	public void clear() {
 		passwords.clear();
-		// TODO: Implement logic
+	}
+
+	private Cipher getCipher(boolean decrypt) {
+		try {
+			byte[] hash = MessageDigest.getInstance("SHA-512").digest(key.getValue().getBytes(StandardCharsets.UTF_8));
+			byte[] key = new byte[256 / 8];
+			System.arraycopy(hash, 0, key, 0, key.length);
+			byte[] iv = new byte[16];
+			System.arraycopy(hash, key.length, iv, 0, iv.length);
+			Cipher c = Cipher.getInstance(TRANSFORMATION);
+			c.init(decrypt ? Cipher.DECRYPT_MODE : Cipher.ENCRYPT_MODE, new SecretKeySpec(key, TRANSFORMATION.split("/")[0]), new IvParameterSpec(iv));
+			return c;
+		} catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException ex) {
+			throw new RuntimeException("Failed to create cypher and / or key for transformation " + TRANSFORMATION, ex);
+		}
 	}
 
 	@XmlRootElement(name = "passworddatabase")
