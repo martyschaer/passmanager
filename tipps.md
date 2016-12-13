@@ -49,7 +49,7 @@ Die beste Vorraussetzung für eine gute Aufbewahrung der Passwörter ist natürl
 
 Ein Passwort-Manager dient dazu, alle Passwörter, welche man besitzt zu verwalten, daher der Name. Bei den meisten Passwort-Managers kann man verschiedene Seiten erfassen und dazu das jeweilige Passwort. Nun muss man sich insgesamt nur noch ein Passwort merken und zwar das Master-Passwort mit welchen man auf den Passwort-Manager zugreift und dann den vollen Zugriff auf seine Passwörter hat. Der Nachteil ist natürlich, wenn von jemandem das Master-Passwort herausgefunden wird, hat derjenige auch Zugriff auf alle Passwörter.
 
-Im Rahmen der IdPA haben wir neben dieser Webseite auch noch einen solchen Passwort-Manager erstellt. Dieser und Informationen zu dem kann man auf der [/passwort-manager](Passwort-Manager) Seite finden.
+Im Rahmen der IdPA haben wir neben dieser Webseite auch noch einen solchen Passwort-Manager erstellt. Dieser und Informationen zu dem kann man auf der [Passwort-Manager](passwort-manager) Seite finden.
 
 ## Zweifaktorauthentifizierung (2FA)
 
