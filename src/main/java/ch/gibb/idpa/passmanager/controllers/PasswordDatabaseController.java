@@ -26,6 +26,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Consumer;
 import javafx.beans.binding.Bindings;
+import javafx.beans.binding.StringExpression;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
@@ -42,6 +43,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
+import javafx.util.Callback;
 
 /**
  *
@@ -96,7 +98,7 @@ public class PasswordDatabaseController implements Initializable {
 	public void editPassword() {
 		PasswordEntry rowData = table.getSelectionModel().getSelectedItem();
 
-		showDialog(rowData).ifPresent(res -> {
+		showEditDialog(rowData).ifPresent(res -> {
 			database.passwordsProperty().remove(rowData);
 			database.passwordsProperty().add(res);
 		});
@@ -125,27 +127,16 @@ public class PasswordDatabaseController implements Initializable {
 		columnDescription.setCellValueFactory(cell -> cell.getValue().descriptionProperty());
 	}
 
-	private Optional<PasswordEntry> showDialog(PasswordEntry original) {
+	private Optional<PasswordEntry> showEditDialog(PasswordEntry original) {
 		PasswordEntry copy = original.clone();
 
-		Dialog<PasswordEntry> dialog = new Dialog<>();
+		Optional<PasswordEntry> ret = showDialog(Bindings.format("Edit Password \"%s\"", copy.labelProperty()), new ButtonType[]{ButtonType.APPLY, ButtonType.CANCEL}, grid -> {
+			grid.addRow(0, new Label("Label: "), createTextField(copy.labelProperty()));
+			grid.addRow(1, new Label("Username: "), createTextField(copy.usernameProperty()));
+			grid.addRow(2, new Label("Password: "), createTextField(copy.passwordProperty()));
+			grid.addRow(3, new Label("Description: "), createTextField(copy.descriptionProperty()));
+		}, button -> button == ButtonType.APPLY ? copy : null);
 
-		dialog.titleProperty().bind(Bindings.format("Edit Password \"%s\"", copy.labelProperty()));
-		dialog.getDialogPane().getButtonTypes().addAll(ButtonType.APPLY, ButtonType.CANCEL);
-		dialog.setResultConverter(button -> button == ButtonType.APPLY ? copy : null);
-
-		GridPane grid = new GridPane();
-		grid.setHgap(10);
-		grid.setVgap(10);
-		grid.setPadding(new Insets(20, 150, 10, 10));
-		dialog.getDialogPane().setContent(grid);
-
-		grid.addRow(0, new Label("Label: "), createTextField(copy.labelProperty()));
-		grid.addRow(1, new Label("Username: "), createTextField(copy.usernameProperty()));
-		grid.addRow(2, new Label("Password: "), createTextField(copy.passwordProperty()));
-		grid.addRow(3, new Label("Description: "), createTextField(copy.descriptionProperty()));
-
-		Optional<PasswordEntry> ret = dialog.showAndWait();
 		ret.ifPresent(entry -> entry.setLastUpdate(Instant.now()));
 		return ret;
 	}
@@ -172,23 +163,31 @@ public class PasswordDatabaseController implements Initializable {
 	private Consumer<? super File> showKeyDialog(Consumer<? super File> consumer) {
 		return file -> {
 			Property<String> key = new SimpleStringProperty();
-			Dialog<String> dialog = new Dialog<>();
 
-			dialog.titleProperty().bind(Bindings.format("Enter key for \"%s\"", file.getName()));
-			dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
-			dialog.setResultConverter(button -> button == ButtonType.OK ? key.getValue() : null);
+			Optional<String> ret = showDialog(Bindings.format("Enter key for \"%s\"", file.getName()), new ButtonType[]{ButtonType.OK, ButtonType.CANCEL}, grid -> {
+				grid.addRow(0, new Label("Key: "), createPasswordField(key));
+			}, button -> button == ButtonType.OK ? key.getValue() : null);
 
-			GridPane grid = new GridPane();
-			grid.setHgap(10);
-			grid.setVgap(10);
-			grid.setPadding(new Insets(20, 150, 10, 10));
-			dialog.getDialogPane().setContent(grid);
-
-			grid.addRow(0, new Label("Key: "), createPasswordField(key));
-
-			Optional<String> ret = dialog.showAndWait();
 			ret.ifPresent(database::setKey);
 			ret.ifPresent(k -> consumer.accept(file));
 		};
+	}
+
+	private <T> Optional<T> showDialog(StringExpression title, ButtonType[] buttons, Consumer<GridPane> dialogPopulator, Callback<ButtonType, T> resultConverter) {
+		Dialog<T> dialog = new Dialog<>();
+
+		dialog.titleProperty().bind(title);
+		dialog.getDialogPane().getButtonTypes().addAll(buttons);
+		dialog.setResultConverter(resultConverter);
+
+		GridPane grid = new GridPane();
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.setPadding(new Insets(20, 150, 10, 10));
+		dialog.getDialogPane().setContent(grid);
+
+		dialogPopulator.accept(grid);
+
+		return dialog.showAndWait();
 	}
 }
