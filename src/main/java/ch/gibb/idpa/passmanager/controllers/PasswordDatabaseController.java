@@ -29,6 +29,7 @@ import javafx.beans.binding.Bindings;
 import javafx.beans.binding.StringExpression;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -43,6 +44,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Window;
 import javafx.util.Callback;
 
 /**
@@ -64,7 +66,13 @@ public class PasswordDatabaseController implements Initializable {
 
 	public void openDatabase() {
 		if (closeDatabase()) {
-			showFileDialog(false).ifPresent(showKeyDialog(database::load));
+			try {
+				showFileDialog(false).ifPresent(showKeyDialog(database::load));
+			} catch (Exception ex) {
+				showDialog(Bindings.format("Failed to open password database"), new ButtonType[]{ButtonType.OK}, grid -> {
+					grid.addRow(0, new Label(ex.getLocalizedMessage()));
+				}, button -> null);
+			}
 		}
 	}
 
@@ -110,6 +118,27 @@ public class PasswordDatabaseController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		ChangeListener<Window> windowListener = (window, oldWindow, newWindow) -> {
+			if (oldWindow != null) {
+				oldWindow.setOnCloseRequest(null);
+			}
+			if (newWindow != null) {
+				newWindow.setOnCloseRequest(event -> {
+					if (!closeDatabase()) {
+						event.consume();
+					}
+				});
+			}
+		};
+		table.sceneProperty().addListener((scene, oldScene, newScene) -> {
+			if (oldScene != null) {
+				oldScene.windowProperty().removeListener(windowListener);
+			}
+			if (newScene != null) {
+				newScene.windowProperty().addListener(windowListener);
+			}
+		});
+
 		table.setItems(database.passwordsProperty());
 
 		table.setRowFactory(table -> {
