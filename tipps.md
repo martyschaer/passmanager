@@ -52,12 +52,16 @@ Ein Passwort-Manager dient dazu, alle Passwörter, welche man besitzt zu verwalt
 Im Rahmen der IdPA haben wir neben dieser Webseite auch noch einen solchen Passwort-Manager erstellt. Dieser und Informationen zu dem kann man auf der [Passwort-Manager](/passmanager/passwort-manager) Seite finden.
 
 ## Zweifaktorauthentifizierung (2FA)
+Eine weitere Möglichkeit sich bei Webseiten anzumelden ist zusätzlich zu einem Passwort die Zweifaktorauthentifizierung, kurz 2FA. Bei der 2FA wird neben dem Passwort noch auf einen zusätzlichen Sicherheitsmechanismus gesetzt. In den meisten Fällen gibt man sein Passwort ein und danach bekommt man z.B. per E-Mail einen Code auf sein Handy, welchen man auch noch eingeben muss, bevor man angemeldet wird. Auf diese Weise können Angreifer, welche das Passwort herausgefunden haben trotzdem nicht Zugriff auf das Konto erhalten, ausser sie hätten direkt Zugriff auf das Handy.
+
+Heutzutage bieten die meisten grösseren Seiten Möglichkeiten zur 2FA an. Wenn man sich also nicht nur auf ein Passwort verlassen will, sollte man die 2FA aktiv.
 
 ## Erkennen von unsicheren Seiten
 
+
+
 ### Phishing
 
-### Speichern von Passwörtern
 
 # Glossar
 
