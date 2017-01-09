@@ -8,6 +8,12 @@ Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch ei
 
 Die Stichprope favorisierte Menschen welche sich routiniert im Internet zurechtfinden, da sie auf [reddit](https://reddit.com/r/samplesize) veröffentlich wurde.
 
+# Inhaltsverzeichnis
+{:.no_toc}
+
+* TOC
+{:toc}
+
 # Fragen
 
 |Frage|Nutzen|
