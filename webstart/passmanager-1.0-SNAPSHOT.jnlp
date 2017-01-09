@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="passmanager-1.0-SNAPSHOT.jnlp">
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" codebase="https://jrb0001.github.io/passmanager/passwort-manager/webstart/" href="passmanager-1.0-SNAPSHOT.jnlp">
   <information>
     <title>Sample JavaFX Application</title>
     <vendor>Gibb</vendor>
