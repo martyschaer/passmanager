@@ -21,13 +21,8 @@
 				<Menu mnemonicParsing="false" text="Edit">
 					<items>
 						<MenuItem mnemonicParsing="false" onAction="#newPassword" text="New Password" />
-                  <MenuItem mnemonicParsing="false" onAction="#editPassword" text="Edit Password" />
-                  <MenuItem mnemonicParsing="false" onAction="#deletePassword" text="Delete Password" />
-					</items>
-				</Menu>
-				<Menu mnemonicParsing="false" text="Help">
-					<items>
-						<MenuItem mnemonicParsing="false" text="About" />
+						<MenuItem mnemonicParsing="false" onAction="#editPassword" text="Edit Password" />
+						<MenuItem mnemonicParsing="false" onAction="#deletePassword" text="Delete Password" />
 					</items>
 				</Menu>
 			</menus>
