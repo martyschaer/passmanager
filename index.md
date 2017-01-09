@@ -13,11 +13,11 @@ Unsere digitale Identität, ob Emails, Facebook, Katzenvideos, Chats oder Google
 
 Die meisten Menschen sind sich der Sicherheit im "realen" Leben bewusst und schliessen ihre Türen ab. Wir zeigen Ihnen was Sie tun können um auch Ihre digitale Identität zu schützen.
 
-Mithilfe einer Umfrage haben wir das IST verhalten von Benutzern aus diversen hintergründen analysiert. Wir sind dabei zum schluss gekommen, dass es vielen Benutzern nicht möglich ist, oder zu mühsam ist sich einzigartige, komplexe Passwörter für jeden Dienst zu merken. Ein Passwortmanager kann diese Aufgabe übernehmen.
+Mithilfe einer Umfrage haben wir das IST-Verhalten von Benutzern aus diversen Hintergründen analysiert. Wir sind dabei zum Schluss gekommen, dass es vielen Benutzern nicht möglich, oder zu mühsam ist sich einzigartige, komplexe Passwörter für jeden Dienst zu merken. Ein Passwortmanager kann diese Aufgabe übernehmen.
 
-Da es nichts bringt unbegründet gute Passwörter zu erzwingen und nur frustration hervorruft ist eines der Hauptziele unserer Arbeit das Verständnis, warum diese Massnahmen nötig sind zu verbessern. Mehr Infos dazu finden Sie auf der [[Tipps-Seite](https://martyschaer.github.io/passmanager/tipps/).
+Da es nichts bringt unbegründet gute Passwörter zu erzwingen und nur frustration hervorruft ist eines der Hauptziele unserer Arbeit das Verständnis, warum diese Massnahmen nötig sind zu verbessern. Mehr Infos dazu finden Sie auf der [Tipps-Seite](https://martyschaer.github.io/passmanager/tipps/).
 
-# Merkblat zur digitalen Sicherheit
+# Merkblatt zur digitalen Sicherheit
 Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: *Wenn ein System sicherer wird, wird es schwieriger für den Benutzer.*
 
 ![Bild welches die Abnahme von Usability mit der Zunahme von Security zeigt]({{ "/assets/img/image_security_usability.jpg" | relative_url }})
@@ -25,11 +25,11 @@ Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: *Wenn ein Sys
 Idealerweise merkt man sich für jeden Dienst (Website, Mobiltelefon, Bank, etc.) ein einzigartiges Passwort welches:
 
  - über 30 Zeichen lang ist
- - Zeichen von `A-Z` und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (`+"\*ç%&/()=?<>@#<`] etc.) und Zahlen `0-9` enthält.
+ - Zeichen von `A-Z` und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (`+"\*ç%&/()=?<>@#<`] etc.) und Zahlen `0-9` in einer möglichst zufälligen Reihenfolge enthält.
 
 Da die wenigsten Menschen dies können, oder gar wollen, benutzen sie häufig (zu) kurze Passwörter mit (zu) wenig Komplexität.
 
-Hier kommt ein Passwortmanager ins Spiel: Der Benutzer merkt sich ein gutes Passwort (genügende Länge und Komplexität), womit der Passwortmanager verschlüsselt wird, welcher sich dann alle anderen Passwörter merkt.
+Hier kommt ein Passwortmanager ins Spiel: Der Benutzer merkt sich ein gutes Passwort (genügende Länge und Komplexität), womit der Passwortmanager verschlüsselt wird, welcher sich dann alle anderen Passwörter merkt. Mehr Information zu Funktionalität eines Passwortmanagers finden Sie [hier](https://martyschaer.github.io/passmanager/passwort-manager).
 
 Das Merkblatt zum ausdrucken können Sie sich [hier herunterladen](/passmanager/assets/pdf/merkblatt.pdf).
 
