@@ -4,6 +4,9 @@ title: Passwort-Manager
 permalink: /passwort-manager/
 order: 4
 ---
+* TOC
+{:toc}
+
 Zusätzlich zu unserer Umfrage und unseren Tipps für den Schutz der digitalen Identität haben wir auch noch die Idee gehabt einen Passwort-Manager als Produkt zu erstellen. Da eines der grössten Probleme im Zusammenhang mit der Sicherheit die Passwörter sind, ist es wichtig, dass man diese gut aufbewahrt.
 Passwörter von Software aufzubewahren löst auch folgendes Problem: Gute Passwörter sind zu komplex und zahlreich um Sie alle in Erinnerung zu halten.
 
@@ -15,7 +18,7 @@ Zur Verschlüsselung verwendet unser Passwortmanager AES256/CBC/PKCS5Padding.
 
  - **AES256**
 
- Lorem lorem
+AES (Advanced Encryption Standard) ist ein symmetrisches Verschlüsslungsverfahren. Der Schlüssel zu Ver- und Entschlüsseln ist also identisch. Die Zahl 256 zeigt dabei die Länge des Schlüssels in Bit auf.
 
  - **CBC**
 
