@@ -28,7 +28,7 @@ AES (Advanced Encryption Standard) ist ein symmetrisches Verschlüsslungsverfahr
 
  PKCS5Padding ist ein Füllschema. Um sicherzustellen das AES256-CBC korrekt funktioniert müssen die oben beschriebenen Blocks aufgefüllt sein. Ein Block ist jeweils 8 Bytes (8 Zeichen) lang. Wenn der Verschlüsselungskey also zum Beispiel `AADAMMVEEMYL` (12 Zeichen) ist, und in Blocks zu 8 Zeichen aufgeteilt werden soll, erhält man: `AADAMMVE` und einen Rest von `EMYL` (nur 4 Zeichen). Der zweite Block muss als aufgefüllt werden.
 
-Mit dem PKCS5Padding-Schema werden Blocks mit der Anzahl der Aufgefüllten Zeichen aufgefüllt. In unserem Beispiel wird also `EMYL` zu `EMYL4444` aufgefüllt.
+Mit dem PKCS5Padding-Schema werden Blocks mit der Anzahl der Aufgefüllten Zeichen aufgefüllt. In unserem Beispiel wird also `EMYL` zu `EMYL4444` aufgefüllt, da 4 Zeichen aufgefüllt werden müssen.
 
 
  - **Achtung:**
