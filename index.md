@@ -5,8 +5,10 @@ permalink: /
 order: 1
 ---
 # Wie sichern wir unsere digitale Identität?
+{:.no_toc}
 
 ## Inhalt
+{:.no_toc}
 
 * TOC
 {:toc}
