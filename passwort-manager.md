@@ -9,7 +9,6 @@ Passwörter von Software aufzubewahren löst auch folgendes Problem: Gute Passw�
 
 # Technische Details
 Unser Passwort-Manager wurde mit Hilfe von Java 8 und JavaFX umgesetzt, damit eine Plattformübergreifende Nutzung gesichert ist.
-Java ist nach neustem Stand der Technik bekannt als Programmiersprache der Enterpriseentwicklung und bietet exzellente Sicherheitsfunktionalität.
 
 ## Verschlüsselung
 Zur Verschlüsselung verwendet unser Passwortmanager AES256/CBC/PKCS5Padding.
