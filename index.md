@@ -29,7 +29,7 @@ Da die wenigsten Menschen dies können, oder gar wollen, benutzen sie häufig (z
 
 Hier kommt ein Passwortmanager ins Spiel: Der Benutzer merkt sich ein gutes Passwort (genügende Länge und Komplexität), womit der Passwortmanager verschlüsselt wird, welcher sich dann alle anderen Passwörter merkt.
 
-Das Merkblatt zum ausdrucken können Sie sich [hier herunterladen](/assets/pdf/merkblatt.pdf).
+Das Merkblatt zum ausdrucken können Sie sich [hier herunterladen](/passmanager/assets/pdf/merkblatt.pdf).
 
 # Download des Passwortmanagers
 Den Download-Link zu unserem Passwort-Manager kann auf der [Passwort-Manager](/passmanager/passwort-manager) Seite gefunden werden.
