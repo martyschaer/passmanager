@@ -29,4 +29,4 @@ Zur Verschlüsselung verwendet unser Passwortmanager AES256/CBC/PKCS5Padding.
 Coming soon (hopefully)
 
 # Download
-Das GitHub-Repository mit dem Code für den Passwort-Manager kann unter [https://github.com/martyschaer/passmanager](https://github.com/martyschaer/passmanager) gefunden werden. Downloads für ausführbare Versionen sind auf der [Release-Seite](https://github.com/martyschaer/passmanager/releases) zu finden.
+Das GitHub-Repository mit dem Code für den Passwort-Manager kann unter [https://github.com/martyschaer/passmanager](https://github.com/martyschaer/passmanager) gefunden werden. Downloads für ausführbare Versionen sind auf der [Release-Seite](https://github.com/martyschaer/passmanager/releases/latest) zu finden.

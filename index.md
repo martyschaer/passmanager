@@ -8,9 +8,8 @@ order: 1
 
 ## Inhalt
 
-1. Kurzer Abstract unserer Arbeit
-2. Merkblatt zur digitalen Sicherheit
-3. Download des Passwortmanagers
+* TOC
+{:toc}
 
 ## Abstract
 Unsere digitale Identität, ob Emails, Facebook, Katzenvideos, Chats oder Google Suchen, ist schützenswert!
@@ -26,4 +25,6 @@ Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: *Wenn ein Sys
 Idealerweise merkt man sich für jeden Dienst (Website, Mobiltelefon, Bank, etc.) ein einzigartiges Passwort welches
  - über 30 Zeichen lang ist
  - Zeichen von A-Z und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (+"\*ç%&/()=?<>@#<] etc.) und Zahlen 0-9 enthält.
+
 ## Download des Passwortmanagers
+Den Download-Link zu unserem Passwort-Manager kann auf der [Passwort-Manager](/passmanager/passwort-manager) Seite gefunden werden.
