@@ -48,20 +48,26 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
+ * Class to store all passwords.
  *
  * @author Jean-Rémy Buchs <jean-remy@gmx.ch>
  */
 public class PasswordDatabase {
 
+	/**
+	 * The algorithm used for encryption / decryption.
+	 */
 	private static String TRANSFORMATION = "AES/CBC/PKCS5Padding";
 
 	private final ObservableList<PasswordEntry> passwords = FXCollections.observableArrayList();
 	private final Property<String> key = new SimpleStringProperty();
 
-	public PasswordDatabase() {
-
-	}
-
+	/**
+	 * Load the password database from a file (current password entries are
+	 * lost).
+	 *
+	 * @param file The file to load from.
+	 */
 	public void load(File file) {
 		FileInputStream in = null;
 		try {
@@ -81,6 +87,11 @@ public class PasswordDatabase {
 		}
 	}
 
+	/**
+	 * Save the password database to a file.
+	 *
+	 * @param file The file to save to.
+	 */
 	public void save(File file) {
 		FileOutputStream out = null;
 		try {
@@ -101,33 +112,58 @@ public class PasswordDatabase {
 		}
 	}
 
+	/**
+	 * The ObservableList of all password entries.
+	 *
+	 * @return ObservableList of all password entries.
+	 */
 	public ObservableList<PasswordEntry> passwordsProperty() {
 		return passwords;
 	}
 
+	/**
+	 * Gets the key used to encrypt / decrypt this password database.
+	 *
+	 * @return The key used to encrypt / decrypt this password database.
+	 */
 	public String getKey() {
 		return key.getValue();
 	}
 
+	/**
+	 * Changes the key used to encrypt / decrypt this password database.
+	 *
+	 * @param val The key used to encrypt / decrypt this password database.
+	 */
 	public void setKey(String val) {
 		key.setValue(val);
 	}
 
-	public Property<String> keyProperty() {
-		return key;
-	}
-
+	/**
+	 * Clear the database.
+	 */
 	public void clear() {
 		passwords.clear();
 	}
 
+	/**
+	 * Construct the cypher used for encryption / decryption.
+	 *
+	 * @param decrypt true if the cypher will be used for decryption, false for
+	 * encryption.
+	 * @return The cyper constructed from the key and the
+	 * {@link #TRANSFORMATION} constant.
+	 */
 	private Cipher getCipher(boolean decrypt) {
 		try {
+			// Construct key.
 			byte[] hash = MessageDigest.getInstance("SHA-512").digest(key.getValue().getBytes(StandardCharsets.UTF_8));
 			byte[] key = new byte[256 / 8];
 			System.arraycopy(hash, 0, key, 0, key.length);
 			byte[] iv = new byte[16];
 			System.arraycopy(hash, key.length, iv, 0, iv.length);
+
+			// Construct cypher.
 			Cipher c = Cipher.getInstance(TRANSFORMATION);
 			c.init(decrypt ? Cipher.DECRYPT_MODE : Cipher.ENCRYPT_MODE, new SecretKeySpec(key, TRANSFORMATION.split("/")[0]), new IvParameterSpec(iv));
 			return c;
@@ -136,6 +172,9 @@ public class PasswordDatabase {
 		}
 	}
 
+	/**
+	 * Class representing the XML tree.
+	 */
 	@XmlRootElement(name = "passworddatabase")
 	@XmlAccessorType(XmlAccessType.FIELD)
 	private static class PasswordEntryList {
