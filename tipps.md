@@ -21,7 +21,7 @@ Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Pass
 
  - Keine Wörter aus einem Wörterbuch gebrauchen. Diese Wörter werden meistens immer zuerst ausprobiert und können innerhalb eines Bruchteils einer Sekunde alle ausgetestet werden.
 
- - Die Länge des Passwortes sollte mindestens 8 Zeichen betragen. Desto länger ein Passwort ist, desto schwieriger ist es für Hacker das Passwort herauszufinden. Am Besten sollten die Passwörter so lange wie möglich sein. Mit jedem Zeichen mehr erhöht sich die Komplexizität exponentiell.
+ - Die Länge des Passwortes sollte mindestens 8 Zeichen betragen. Desto länger ein Passwort ist, desto schwieriger ist es für Hacker das Passwort herauszufinden. Am Besten sollten die Passwörter so lange wie möglich sein. Mit jedem Zeichen mehr erhöht sich die Komplexizität exponentiell.    
  **Zur Veranschaulichung:**  
  Ein Passwort mit Gross-, Kleinbuchstaben, Zahlen und Sonderzeichen mit der Länge von 6 Zeichen, lässt sich innerhalb von ein paar Minuten cracken. Während ein ähnliches Passwort mit 8 Zeichen, schon einige Tage dauert. Ein Passwort mit 10 oder mehr Zeichen benötigt dann schon eine sehr lange Zeit bis es gecrackt ist.
 
@@ -31,7 +31,7 @@ Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Pass
 
 - Wenn man sich nicht die Mühe machen will, selber ein starkes Passwort auszudenken, kann man sich mithilfe von Passwort-Generatoren starke Passwörter generieren.  
 **Zur Veranschaulichung:**  
- Um an einem konkreten Beispiel zu sehen wie sicher ein Passwort ist, kann Software verwendet werden. Wir empfehlen ein Produkt namens [zxcvbn](https://www.bennish.net/password-strength-checker/). Es basiert auf einer [Technologie von Dropbox](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/).  
+ Um an einem konkreten Beispiel zu sehen wie sicher ein Passwort ist, kann Software verwendet werden. Wir empfehlen ein Produkt namens [zxcvbn](https://www.bennish.net/password-strength-checker/). Es basiert auf einer [Technologie von Dropbox](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/).    
 **Man sollte *nie* seine echten Passwörter auf einer unbekannten Website eingeben.** Daher verwendet man am besten ein Passwort das ähnlich ist zu dem, welches man testen möchte.
 
 ### Wiederverwendung
