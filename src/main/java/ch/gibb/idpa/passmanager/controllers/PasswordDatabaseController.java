@@ -48,6 +48,7 @@ import javafx.stage.Window;
 import javafx.util.Callback;
 
 /**
+ * Controller for the password database functionality.
  *
  * @author Jean-Rémy Buchs <jean-remy@gmx.ch>
  */
@@ -64,6 +65,9 @@ public class PasswordDatabaseController implements Initializable {
 
 	private final PasswordDatabase database = new PasswordDatabase();
 
+	/**
+	 * Close the current database, let the user choose another one and open it.
+	 */
 	public void openDatabase() {
 		if (closeDatabase()) {
 			try {
@@ -76,10 +80,18 @@ public class PasswordDatabaseController implements Initializable {
 		}
 	}
 
+	/**
+	 * Save the current database (let the user choose where).
+	 */
 	public void saveDatabase() {
 		showFileDialog(true).ifPresent(showKeyDialog(database::save));
 	}
 
+	/**
+	 * Close the current database after a confirmation.
+	 *
+	 * @return true if the current database was closed.
+	 */
 	public boolean closeDatabase() {
 		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
 		alert.setTitle("Close Database");
@@ -94,6 +106,9 @@ public class PasswordDatabaseController implements Initializable {
 		return false;
 	}
 
+	/**
+	 * Create a new empty password entry and let the user edit it.
+	 */
 	public void newPassword() {
 		PasswordEntry entry = new PasswordEntry();
 		entry.setLabel("Unnamed password");
@@ -103,6 +118,9 @@ public class PasswordDatabaseController implements Initializable {
 		editPassword();
 	}
 
+	/**
+	 * Let the user edit the currently selected password entry.
+	 */
 	public void editPassword() {
 		PasswordEntry rowData = table.getSelectionModel().getSelectedItem();
 
@@ -112,12 +130,16 @@ public class PasswordDatabaseController implements Initializable {
 		});
 	}
 
+	/**
+	 * Delete the currently selected password entry.
+	 */
 	public void deletePassword() {
 		database.passwordsProperty().remove(table.getSelectionModel().getSelectedItem());
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		// Ask for confirmation before closing application
 		ChangeListener<Window> windowListener = (window, oldWindow, newWindow) -> {
 			if (oldWindow != null) {
 				oldWindow.setOnCloseRequest(null);
@@ -139,8 +161,8 @@ public class PasswordDatabaseController implements Initializable {
 			}
 		});
 
+		// Prepare table rows.
 		table.setItems(database.passwordsProperty());
-
 		table.setRowFactory(table -> {
 			TableRow<PasswordEntry> row = new TableRow<>();
 			row.setOnMouseClicked(event -> {
@@ -151,11 +173,19 @@ public class PasswordDatabaseController implements Initializable {
 			return row;
 		});
 
+		// Prepare table columns.
 		columnLabel.setCellValueFactory(cell -> cell.getValue().labelProperty());
 		columnUsername.setCellValueFactory(cell -> cell.getValue().usernameProperty());
 		columnDescription.setCellValueFactory(cell -> cell.getValue().descriptionProperty());
 	}
 
+	/**
+	 * Show the edit dialog for a password entry.
+	 *
+	 * @param original The password entry that should be edited.
+	 * @return The modified password entry or not present if the user has
+	 * cancelled the edit. May be a clone of the original.
+	 */
 	private Optional<PasswordEntry> showEditDialog(PasswordEntry original) {
 		PasswordEntry copy = original.clone();
 
@@ -170,18 +200,38 @@ public class PasswordDatabaseController implements Initializable {
 		return ret;
 	}
 
+	/**
+	 * Create a new text field for a property.
+	 *
+	 * @param property The property to bind to the text field.
+	 * @return The new text field bound to the property.
+	 */
 	private TextField createTextField(Property<String> property) {
 		TextField field = new TextField();
 		field.textProperty().bindBidirectional(property);
 		return field;
 	}
 
+	/**
+	 * Create a new password field for a property.
+	 *
+	 * @param property The property to bind to the password field.
+	 * @return The new password field bound to the property.
+	 */
 	private PasswordField createPasswordField(Property<String> property) {
 		PasswordField field = new PasswordField();
 		field.textProperty().bindBidirectional(property);
 		return field;
 	}
 
+	/**
+	 * Shows a file dialog to the user.
+	 *
+	 * @param save true if the dialog should be a save dialog, false if it
+	 * should be an open dialog.
+	 * @return The selected file or not present if the user has cancelled the
+	 * selection.
+	 */
 	private Optional<File> showFileDialog(boolean save) {
 		FileChooser chooser = new FileChooser();
 		chooser.setTitle((save ? "Save" : "Open") + " Password Database");
@@ -189,6 +239,13 @@ public class PasswordDatabaseController implements Initializable {
 		return Optional.ofNullable(save ? chooser.showSaveDialog(null) : chooser.showOpenDialog(null));
 	}
 
+	/**
+	 * Creates a consumer to show a dialog to the user where he enters the key
+	 * of the password database.
+	 *
+	 * @param consumer Consumer to call if a key was entered.
+	 * @return New consumer which should be called to show the dialog.
+	 */
 	private Consumer<? super File> showKeyDialog(Consumer<? super File> consumer) {
 		return file -> {
 			Property<String> key = new SimpleStringProperty();
@@ -202,13 +259,25 @@ public class PasswordDatabaseController implements Initializable {
 		};
 	}
 
+	/**
+	 * Creates and shows a dialog.
+	 *
+	 * @param <T> The type of the result.
+	 * @param title The expression for the title of the dialog.
+	 * @param buttons An array with all buttons.
+	 * @param dialogPopulator Consumer which adds the components to the dialog.
+	 * @param resultConverter Converter to convert the input to the result.
+	 * @return The result.
+	 */
 	private <T> Optional<T> showDialog(StringExpression title, ButtonType[] buttons, Consumer<GridPane> dialogPopulator, Callback<ButtonType, T> resultConverter) {
+		// Generic stuff.
 		Dialog<T> dialog = new Dialog<>();
 
 		dialog.titleProperty().bind(title);
 		dialog.getDialogPane().getButtonTypes().addAll(buttons);
 		dialog.setResultConverter(resultConverter);
 
+		// Content.
 		GridPane grid = new GridPane();
 		grid.setHgap(10);
 		grid.setVgap(10);
@@ -217,6 +286,7 @@ public class PasswordDatabaseController implements Initializable {
 
 		dialogPopulator.accept(grid);
 
+		// Show the dialog.
 		return dialog.showAndWait();
 	}
 }
