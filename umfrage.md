@@ -47,3 +47,13 @@ Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeiche
 ![Bild welches die Geschlechtsaufteilung der Befragten zeigt (29.4 % Weiblich, 68.3% Männlich)]({{ "/assets/img/image_2.png" | relative_url }})
 
 Die extreme Mengendifferenz zwischen männlichen und weiblichen Teilnehmern ist durch die Demographie der Benutzerbasis von [reddit.com](https://reddit.com) zu begründen ([Quelle: journalism.org](http://www.journalism.org/2016/02/25/reddit-news-users-more-likely-to-be-male-young-and-digital-in-their-news-preferences/)).
+
+## Poweruser
+
+![Scatterdiagramme, welche zeigen das Poweruser stärkere Passwörter benutzen.]({{ "/assets/img/charts_correl_poweruser_pass.png" | relative_url }})
+
+Als Poweruser werden Menschen bezeichnet, welche sich mit Technologie gut auskennen und/da sie diese viel nutzen.
+
+In den Diagrammen kann man sehen, dass die Benutzer welche Technologien mehr nutzen, längere Passwörter benutzen. Dies heisst nicht zwingend dass die Passwörter auch besser sind, aber als Faustregel gilt: Länger = Besser!
+
+Es fällt auch auf, dass die Kurve steiler ist bei Desktops als bei anderen Technologien. Wir glauben dass dies darauf zurückzuführen ist, dass heute nur noch Poweruser auch wirklich einen Desktop benutzen, da ein Smartphone oder Tablet auch eine gut ausgerüstete Arbeitsplatform ist.
