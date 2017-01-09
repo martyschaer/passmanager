@@ -23,7 +23,7 @@ Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: *Wenn ein Sys
 Idealerweise merkt man sich für jeden Dienst (Website, Mobiltelefon, Bank, etc.) ein einzigartiges Passwort welches:
 
  - über 30 Zeichen lang ist
- - Zeichen von `A-Z` und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (`+"\*ç%&/()=?<>@#<] etc.`) und Zahlen `0-9` enthält.
+ - Zeichen von `A-Z` und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (`+"\*ç%&/()=?<>@#<`] etc.) und Zahlen `0-9` enthält.
 
 Da die wenigsten Menschen dies können, oder gar wollen, benutzen sie häufig (zu) kurze Passwörter mit (zu) wenig Komplexität.
 
