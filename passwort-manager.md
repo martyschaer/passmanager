@@ -33,3 +33,6 @@ Coming soon (hopefully)
 
 # Download
 Das GitHub-Repository mit dem Code für den Passwort-Manager kann unter [https://github.com/martyschaer/passmanager](https://github.com/martyschaer/passmanager) gefunden werden. Downloads die neueste Version können auf der [Release-Seite](https://github.com/martyschaer/passmanager/releases/latest) gefunden werden.
+
+# Java Web Start
+Der Passwort-Manager kann auch direkt per Link gestartet werden: [webstart/passmanager-1.0-SNAPSHOT.jnlp](Passwort-Manager Java Web Start).

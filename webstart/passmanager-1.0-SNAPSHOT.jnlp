@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="passmanager-1.0-SNAPSHOT.jnlp">
+  <information>
+    <title>Sample JavaFX Application</title>
+    <vendor>Gibb</vendor>
+    <description>Sample JavaFX Application.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.8+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="passmanager-1.0-SNAPSHOT-jfx.jar" size="15600" download="null" />
+    <jar href="lib/jaxb-java-time-adapters-1.1.3.jar" size="14165" download="null" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <jfx:javafx-desc  width="800" height="600" main-class="ch.gibb.idpa.passmanager.MainApp"  name="passmanager-1.0-SNAPSHOT" />
+  <update check="background"/>
+</jnlp>
