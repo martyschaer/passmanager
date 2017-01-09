@@ -18,6 +18,7 @@ Die nächsten Abschnitte befassen sich alle mit der best Practice [^1] wie man s
 Heuzutage können Hacker mehrere Milliarden Passwörter jede Sekunde generieren und austesten. Ein Passwort wie "apfel" oder "password" werden dabei innerhalb von ein paar Milisekunden gecrackt.
 
 Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Passwortes erhöhen und dadurch schwieriger für Hacker zum finden sind.
+
  - Keine Wörter aus einem Wörterbuch gebrauchen. Diese Wörter werden meistens immer zuerst ausprobiert und können innerhalb eines Bruchteils einer Sekunde alle ausgetestet werden.
  - Die Länge des Passwortes sollte mindestens 8 Zeichen betragen. Desto länger ein Passwort ist, desto schwieriger ist es für Hacker das Passwort herauszufinden. Am Besten sollten die Passwörter so lange wie möglich sein. Mit jedem Zeichen mehr erhöht sich die Komplexizität exponentiell.
 
