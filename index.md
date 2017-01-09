@@ -4,10 +4,6 @@ title: Wie sichern wir unsere digitale Identität?
 permalink: /
 order: 1
 ---
-
-# Inhaltsverzeichnis
-{:.no_toc}
-
 * TOC
 {:toc}
 
@@ -24,7 +20,8 @@ Das Untenstehende Bild zeigt leider eine unausweichliche Wahrheit: *Wenn ein Sys
 
 ![Bild welches die Abnahme von Usability mit der Zunahme von Security zeigt]({{ "/assets/img/image_security_usability.jpg" | relative_url }})
 
-Idealerweise merkt man sich für jeden Dienst (Website, Mobiltelefon, Bank, etc.) ein einzigartiges Passwort welches
+Idealerweise merkt man sich für jeden Dienst (Website, Mobiltelefon, Bank, etc.) ein einzigartiges Passwort welches:
+
  - über 30 Zeichen lang ist
  - Zeichen von `A-Z` und Umlaute in Gross- und Kleinschreibung, Sonderzeichen (`+"\*ç%&/()=?<>@#<] etc.`) und Zahlen `0-9` enthält.
 
