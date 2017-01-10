@@ -57,6 +57,3 @@ Diesen Download-Link haben wir dann einfach auf unserer Seite eingebunden und sc
 Ein grosser Teil der Dokumentation ist ja im Grund die Webseite, also haben wir schon dort den grössten Teil behandelt. Die restlichen Dokumentationen wie das Merkblatt und die Benutzeranleitung für den Passwort-Manager mussten wir jedoch trotzdem noch erstellen.
 
 Da sind wir leider gegen Schluss ein Bisschen in Zeitbedrängnisse gekommen, da wir die Dokumentationen immer wieder nach hinten geschoben haben. Schlussendlich konnte wir sie trotzdem noch pünktlich für den Abgabetermin fertigstellen.
-
-# Vorbereitung der Präsentation
-
