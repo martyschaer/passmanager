@@ -52,8 +52,8 @@ Die extreme Mengendifferenz zwischen männlichen und weiblichen Teilnehmern ist 
 
 ![Scatterdiagramme, welche zeigen das Poweruser stärkere Passwörter benutzen.]({{ "/assets/img/charts_correl_poweruser_pass.png" | relative_url }})
 
-Als Poweruser werden Menschen bezeichnet, welche sich mit Technologie gut auskennen und/da sie diese viel nutzen.
+Als Poweruser werden Menschen bezeichnet, welche sich mit Technologie gut auskennen, da sie diese häufig nutzen.
 
-In den Diagrammen kann man sehen, dass die Benutzer welche Technologien mehr nutzen, längere Passwörter benutzen. Dies heisst nicht zwingend dass die Passwörter auch besser sind, aber als Faustregel gilt: Länger = Besser!
+In den Diagrammen kann man sehen, dass die Poweruser generell längere Passwörter benutzen. Dies heisst nicht zwingend, dass die Passwörter auch besser sind. Als Faustregel gilt dennoch: Länger = Besser!
 
-Es fällt auch auf, dass die Kurve steiler ist bei Desktops als bei anderen Technologien. Wir glauben dass dies darauf zurückzuführen ist, dass heute nur noch Poweruser auch wirklich einen Desktop benutzen, da ein Smartphone oder Tablet auch eine gut ausgerüstete Arbeitsplatform ist.
+Es fällt auch auf, dass die Kurve bei Desktops steiler als bei anderen Technologien ist. Wir glauben, dass dies darauf zurückzuführen ist, dass heute nur noch Poweruser auch wirklich einen Desktop benutzen. Ein Smartphone oder Tablet ist heutzutage ja auch eine gut ausgerüstete Arbeitsplatform.
