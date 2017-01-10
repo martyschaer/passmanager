@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Wie sichern wir unsere digitale Identität?
-permalink: /
-order: 1
+title: Arbeitsjournal
+permalink: /arbeitsjournal/
+order: 5
 ---
 * TOC
 {:toc}
