@@ -9,7 +9,7 @@ order: 2
 
 Zur Analyse, wie viele Menschen schon einen Passwort-Manager nutzen oder noch einen nötig hätten, haben wir eine kurze Umfrage durchgeführt. Diese haben wir im Internet veröffentlicht und innerhalb einer Woche ca. 130 Antworten erhalten.
 
-Die Stichprope favorisierte Menschen welche sich routiniert im Internet zurechtfinden, da sie auf [reddit](https://reddit.com/r/samplesize) veröffentlich wurde.
+Die Stichprobe favorisierte Menschen welche sich routiniert im Internet zurechtfinden, da sie auf [reddit](https://reddit.com/r/samplesize) veröffentlich wurde.
 
 # Fragen
 
