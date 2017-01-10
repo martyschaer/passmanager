@@ -32,7 +32,7 @@ Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Pass
 - Wer sich nicht die Mühe machen will, selber ein starkes Passwort auszudenken, kann mithilfe von Passwort-Generatoren starke Passwörter generieren.  
 **Zur Veranschaulichung:**  
  Um an einem konkreten Beispiel zu sehen wie sicher ein Passwort ist, kann bestehende Software verwendet werden. Wir empfehlen ein Produkt namens [zxcvbn](https://www.bennish.net/password-strength-checker/). Es basiert auf einer [Technologie von Dropbox](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/).    
-**Man sollte *nie* seine echten Passwörter auf einer unbekannten Website eingeben.** Daher verwendet man am besten ein Passwort, das dem zu testenden Passwort nur ähnlich ist.
+**Man sollte seine echten Passwörter *nie* auf einer unbekannten Website eingeben.** Daher verwendet man am besten ein Passwort, das dem zu testenden Passwort nur ähnlich ist.
 
 ### Wiederverwendung
 Man sollte möglichst für jede Webseite / Dienst, bei dem man ein Passwört benötigt, ein anderes wählen. Dann ist man für den Fall geschützt, dass auf irgendeiner Seite sein Passwort herausgefunden wurde. Wenn man überall das selbe Passwort verwendet hätte, könnte der Angreifer in alle Konten eindringen. Bei verschiedenen Passwörtern ist dies nicht der Fall.
