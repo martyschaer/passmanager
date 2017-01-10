@@ -19,7 +19,7 @@ Heuzutage können Angreifer mehrere Milliarden Passwörter pro Sekunde generiere
 
 Nachfolgend ein paar wichtige Hilfestellungen, die die Komplexizität eines Passwortes erhöhen und dadurch den Schutz gegen einen Angreifer verbessern.
 
- - Keine Wörter aus einem Wörterbuch brauchen. Diese Wörter werden meistens immer zuerst getestet und können innerhalb eines Bruchteils einer Sekunde alle überprüft werden.
+ - Keine Wörter aus einem Wörterbuch verwenden. Diese Wörter werden meistens immer zuerst getestet und können innerhalb eines Bruchteils einer Sekunde alle überprüft werden.
 
  - Die Länge des Passwortes sollte mindestens 8 Zeichen betragen. Desto länger ein Passwort ist, desto schwieriger ist es für den Angreifer, das Passwort herauszufinden. Am Besten sollten die Passwörter so lange wie möglich sein. Mit jedem Zeichen mehr erhöht sich die Komplexizität exponentiell.    
  **Zur Veranschaulichung:**  
