@@ -14,7 +14,7 @@ Passwörter von Software aufzubewahren löst auch folgendes Problem: Gute Passw�
 Unser Passwort-Manager wurde mit Hilfe von Java 8 und JavaFX umgesetzt, damit eine Plattformübergreifende Nutzung gesichert ist.
 
 ## Verschlüsselung
-Zur Verschlüsselung verwendet unser Passwortmanager AES256/CBC/PKCS5Padding.
+Zur Verschlüsselung verwendet unser Passwort-Manager AES256/CBC/PKCS5Padding.
 
  - **AES256**
 
