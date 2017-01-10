@@ -35,7 +35,7 @@ Mit dem PKCS5Padding-Schema werden Blocks mit der Anzahl der Aufgefüllten Zeich
  Die Erklärungen auf dieser Seite sind zum besseren Verständnis stark vereinfacht.
 
 # Benutzeranleitung
-Coming soon (hopefully)
+Die Kurzanleitung können Sie sich [hier herunterladen](/passmanager/assets/pdf/manual.pdf).
 
 # Download
 Das GitHub-Repository mit dem Code für den Passwort-Manager kann unter [https://github.com/martyschaer/passmanager](https://github.com/martyschaer/passmanager) gefunden werden. Downloads die neueste Version können auf der [Release-Seite](https://github.com/martyschaer/passmanager/releases/latest) gefunden werden.
