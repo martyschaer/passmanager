@@ -7,6 +7,10 @@ order: 5
 * TOC
 {:toc}
 
+# Ideenfindung
+
+Die Suche nach dem Oberthema ging relativ einfach, da für uns von Anfang an klar war, dass wir ein Produkt zu einem IT-Thema erstellen wollen. Die Suche nach dem genauen Thema sowie dem Produkt gestaltete sich schwieriger. Ausserdem fehlte Severin Kaderli, wodurch wir auf wichtige Ideen verzichten mussten. Schlussendlich einigten wir uns auf das Thema Kryptographie mit dem Produkt Passwortmanager. Dies ist ein grosses und komplexes Thema, wodurch wir alle noch viel lernen können.
+
 # Grobkonzept
 
 Die Planung hat sich als relativ einfach herausgestellt und die ganze Arbeit konnte in verschiedene Module unterteilt werden: Umfrage, Informationswebsite, Passwort-Manager und Dokumentation.
