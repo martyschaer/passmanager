@@ -20,12 +20,12 @@ Die Stichprobe favorisierte Menschen welche sich routiniert im Internet zurechtf
 |Woher kommen Sie? (Kontinent)|Zur Einordnung der Teilnehmer.|
 |Woher kommen Sie? (Land)|Zur Einordnung der Teilnehmer.|
 |In welcher Branche arbeiten oder studieren Sie?|Zur Einordnung der Teilnehmer.|
-|Ungefähr wie oft pro Woche benutzen Sie..[Stunden]?[Ein Gerät vom Arbeitgeber, Desktop, Laptop, Tablet, Smartphone]|Die Verbreitung der einzelnen Geräte hat einen Einfluss auf die wichtigste Zielgruppe eines Passwortmanagers.|
+|Ungefähr wie oft pro Woche benutzen Sie..[Stunden]?[Ein Gerät vom Arbeitgeber, Desktop, Laptop, Tablet, Smartphone]|Die Verbreitung der einzelnen Geräte hat einen Einfluss auf die wichtigste Zielgruppe eines Passwort-Managers.|
 |Wie sichern Sie ihre Geräte? [Ein Gerät vom Arbeitgeber, Desktop, Laptop, mobiles Gerät]|Welche Alternativen zu Passwörtern werden eingesetzt?|
 |Wie viele verschiedene Dienste verwenden Sie?|Wenn man pro Dienst ein eigenes Passwort einsetzen will, braucht man unter Umständen sehr viele Passwörter.|
-|Wie viele verschiedene Passwörter verwenden Sie?|Ein eigenes Passwort pro Service ist viel sicherer, aber fast nur mit einem Passwortmanager möglich.|
+|Wie viele verschiedene Passwörter verwenden Sie?|Ein eigenes Passwort pro Service ist viel sicherer, aber fast nur mit einem Passwort-Manager möglich.|
 |Welche Arten von Zeichen verwenden Ihre Passwörter?|Je mehr Arten der Zeichen (Zahlen, Grossbuchstaben, Kleinbuchstaben und Sonderzeichen) im Passwort enthalten sind, desto schwieriger sind Brute-Force-Angriffe.|
-|Im Durchschnitt, wie viele Zeichen haben Ihre Passwörter?|Der Einsatz eines Passwortmanager führt häufig zu längeren Passwörtern. Längere Passwörter sind sicherer gegen Brute-Force-Angriffe.|
+|Im Durchschnitt, wie viele Zeichen haben Ihre Passwörter?|Der Einsatz eines Passwort-Manager führt häufig zu längeren Passwörtern. Längere Passwörter sind sicherer gegen Brute-Force-Angriffe.|
 |Benutzen Sie 2FA (z.B. SMS Codes, eBanking Kartenleser, etc..)?|Ist das Passwort der einzige Schutz des Kontos? Mit 2FA reicht die Kenntnis des Passwortes nicht für eine Anmeldung, ausser man hat gleichzeitig auch Zugriff auf das Smartphone / Hardware Token / etc. des Opfers.|
 
 # Auswertung
@@ -34,7 +34,7 @@ Die Stichprobe favorisierte Menschen welche sich routiniert im Internet zurechtf
 
 ![Balkendiagramm, welches die Verteilung von Passwortlängen zeigt. Auffällige Spitzen bei 8, 10, 12 und 15 Zeichen]({{ "/assets/img/image_0.png" | relative_url }})
 
-Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeichen lässt sich durch die Anforderung der Mindestlänge vieler Dienste erklären. Bis etwa Passwörter mit zwölf Zeichen lassen sich gut merken. Die Häufungen bei 15 und 20 Zeichen könnte durch Standardeinstellungen der Passwortmanager erklärt werden.
+Die durchschnittliche Länge beträgt 11,6 Zeichen. Die Häufung bei acht Zeichen lässt sich durch die Anforderung der Mindestlänge vieler Dienste erklären. Bis etwa Passwörter mit zwölf Zeichen lassen sich gut merken. Die Häufungen bei 15 und 20 Zeichen könnte durch Standardeinstellungen der Passwort-Manager erklärt werden.
 
 ## Länder
 
